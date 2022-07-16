@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    background: rgb(250, 247, 247);
+    overflow-x: hidden;
+    transition: .6s;
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#header {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    padding: 1rem;
+    justify-content:space-between;
+    background-color: rgb(245, 243, 243);
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+}
+
+#menu li {
+    display: block;
+    padding: .5rem;
+}
+
+#element {
+    width: 15px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #212121;
+}
+
+a:hover {
+    color: #1b1ec7;
+
+}
+
+#btn-mob {
+    display: none;
+}
+
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background:rgb(245, 243, 243);
+    display: flex; /* coloca lado a lado */
+    /* Colocar ao centro */
+    justify-content: center; /* eixo x */
+    align-items: center; /* eixo y */
+}
+
+.left-login {
+    width: 50vw; /* ocupa 50% no eixo x */
+    height: 100vh; /* ocupa 100% no eixo y */
+    display: flex;
+    /* Colocar ao centro */
+    justify-content: center;
+    align-items: center;
+    /* Coloca um por cima do outro */
+    flex-direction: column;
+}
+
+.left-login > h1 { /* chamar elementos dentro da sua classe  > h1, no caso de ter mais que 1 H1 e 
+    caso queiramos cores diferentes já não dá */
+    font-size: 3vw;
+    color: #0b0a14;
+}
+
+.left-login-image {
+    width: 30vw;
+}
+
+.right-login {
+    width: 50vw; /* ocupa 50% no eixo x */
+    height: 100vh; /* ocupa 100% no eixo y */
+    display: flex;
+    /* Colocar ao centro */
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    width: 60%; /* ocupa 60% de 50vw(right-login) no eixo x */
+    display: flex;
+    /* Colocar ao centro */
+    justify-content: center;
+    align-items: center;
+    /* Coloca um por cima do outro */
+    flex-direction: column;
+    padding: 30px 35px; /* margem do lado de dentro */
+    background: #2f2841;
+    border-radius: 20px; /* arredondamento das extremidades */
+    box-shadow: 0px 10px 40px #00000056; /* sombra */
+}
+
+.card-login > h1 {
+    color: #fff;
+    font-weight: 800; /* grossura da fonte */
+    margin: 0;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056; /* sombra */
+    outline: none; /* retira a cx que surgia quando selecionado */
+    box-sizing: border-box; /* evita que o input exceda o tamanho */
+}
+
+.textfield > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder { /* */
+    color: #f0ffff94;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+.btn-login:hover {
+    color: #fff;
+    background: rgb(35, 250, 2);
+}
+
+.dark-mode {
+    background: #fff;
+}
+
+.dark-mode #header {
+    background: #0b0a14;
+}
+
+.dark-mode nav ul li a {
+    text-decoration: none;
+    color: #f7f9e9;
+}
+
+.dark-mode nav ul li a:hover {
+    color: #f35c29;
+}
+
+.dark-mode .main-login {
+    background: #0b0a14;
+}
+
+.dark-mode .left-login > h1 {
+    color: #fff;
+}
+
+@media only screen and (max-width: 950px) {
+    /*Enquanto tiver uma largura de 950px adicione os seguintes elementos */
+    .card-login {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /*Enquanto tiver uma largura de 600px adicione os seguintes elementos */
+    
+    #btn-mob {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+    
+    #menu {
+       display: block;
+       position: absolute;
+       width: 100%;
+       top: 70px;
+       right: 0px;
+       background: rgb(245, 243, 243);
+       height: 0px;
+       transition: .6s;
+       z-index: 1000;
+       visibility: hidden;
+       overflow-y: hidden;
+    }
+
+    #menu li {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+    }
+
+    #navbar.on #menu {
+        height: 100vh;
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    #hamburger::after, #hamburger::before {
+        content: '';
+        width: 20px;
+        display: block;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+
+    #navbar.on #hamburger {
+        border-top-color: transparent;
+    }
+
+    #navbar.on #hamburger::before {
+        transform: rotate(135deg);
+    }
+
+    #navbar.on #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    .main-login {
+        flex-direction: column;
+    }
+
+    .left-login > h1 {
+        display: none; /*Retira o titulo para simplificar*/
+    }
+
+    .left-login { /*Para ocupar a largura da página*/
+        width: 100%;
+        height: auto;
+    }
+
+    .right-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login-image {
+        width: 50vw;
+    }
+
+    .card-login {
+        width: 90%;
+    }
+
+    .dark-mode #menu {
+        background: #0b0a14;
+    }
+
+    .dark-mode #menu li {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(130, 118, 118, 0.653);
+    }
+
+    .dark-mode #logo, #hamburger, #hamburger::after, #hamburger::before { 
+        color: #f7f9e9;
+    }
+}
