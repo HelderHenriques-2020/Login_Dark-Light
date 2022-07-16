@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div id="container">
+        <header id="header">
+            <a id="logo" href="">HdevH</a>
+            <nav id="navbar">
+                <button aria-label="Open Menu" id="btn-mob" aria-haspopup="true" aria-controls="menu" aria-expanded ="false">Menu
+                    <span id="hamburger"></span>
+                </button>
+                <ul id="menu" role="menu">
+                    <li><a href=''>HOME</a></li>
+                    <li><a href=''>ABOUT</a></li>
+                    <li><a href=''>PORTFOLIO</a></li>
+                    <li><a href=''>SERVICES</a></li>
+                    <li><a href=''>HIRE ME</a></li>
+                    <li><img src='moon.png' id='element'></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="main-login">
+            <div class="left-login">
+                <h1>Faça Login<br>Faça parte do nosso mundo</h1>
+                <img src="imagelogin.svg" class="left-login-image" alt="imagem">
+            </div>
+            <div class="right-login">
+                <div class="card-login">
+                    <h1>LOGIN</h1>
+                    <div class="textfield">
+                        <label for="utilizador">Utilizador</label>
+                        <input type="text" name="utilizador" placeholder="Utilizador">
+                    </div>
+                    <div class="textfield">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" placeholder="Password">
+                    </div>
+                    <button class="btn-login">LOGIN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
